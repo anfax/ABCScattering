@@ -1,9 +1,7 @@
+This is a modified version of the ABC Quantum Reactive Scattering Program forked from humberto-jr/abc  originally developed by the group of D. E. Manolopoulos [1].
 # ABC
-My cool new project!
 
-## modify 
 
-- [ ] use module make up all the function and subroutine  
-- [ ] add fpm to build the project 
-- [ ] add Makefile to build the project
-- [ ] modify the source code file name to lower case for make it easier to use 
+-----
+
+[1] D. Skouteris et al., Computer Physics Communications 133 128–135 (2000).
