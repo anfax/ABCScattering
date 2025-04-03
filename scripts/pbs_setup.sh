@@ -16,7 +16,7 @@ J_max=10
 J_step=1
 
 # Executable
-abc_exe="/home/humberto/balalab/H+D2/abc/bkmp2/exe/abc.out"
+abc_exe="./abc.out"
 
 # PBS batch configuration
 wall_time="700:00:00"

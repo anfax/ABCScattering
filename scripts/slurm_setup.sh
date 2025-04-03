@@ -16,7 +16,7 @@ J_max=10
 J_step=1
 
 # Executable
-abc_exe="/home/humberto/balalab/H+D2/abc/bkmp2/exe/abc.out"
+abc_exe="./abc.out"
 
 # Slurm batch configuration
 wall_time="10:00:00"
@@ -32,7 +32,7 @@ env_ld_path=""
 env_omp_threads="OMP_NUM_THREADS=$omp_threads"
 
 # GPU configuration (by generic resource scheduling)
-gres="gpu:k80:4"
+gres=${gres:-""}
 
 # Misc
 input_filename="input.d"
@@ -92,7 +92,7 @@ do
 
 		if [ "$gres" != "" ]
 		then
-			echo "#SBATCH  -p GPU"                                 >> $filename
+			# echo "#SBATCH  -p all"                                 >> $filename
 			echo "#SBATCH --gres=$gres"                            >> $filename
 		fi
 
@@ -133,6 +133,8 @@ do
 		echo 'echo "" >> abc.log'                                 >> $filename
 
 		echo 'echo "# Calculation ending at $(date)" >> abc.log'  >> $filename
+		# 添加复制 abc.out 到 slurm_filename 所在目录
+        cp "$abc_exe" "$parity_dir/"
 	done
 
 	echo "J=$J"

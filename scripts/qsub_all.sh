@@ -11,7 +11,7 @@ set -u
 
 # Total angular momentum
 J_min=0
-J_max=1
+J_max=10
 J_step=1
 
 # Misc

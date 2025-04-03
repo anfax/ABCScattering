@@ -1,2 +1,0 @@
-f90 -Ofast abc.f fun.f lin.f pot.f -o abc.x -lscs
-rm *.o

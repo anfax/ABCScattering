@@ -1,0 +1,23 @@
+name = "ABC"
+version = "0.1.0"
+license = "license"
+author = "Li Hao"
+maintainer = "LIH_ao@outlook.com"
+copyright = "Copyright 2025, LIHao"
+
+[build]
+
+# link=["blas","lapack"]
+link = ["mkl_intel_lp64", "mkl_sequential", "mkl_core", "pthread", "m", "dl"]
+#link-options = ["-L/opt/intel/mkl/lib/intel64"]  
+auto-executables = true
+auto-tests = true
+auto-examples = true
+module-naming = false
+[install]
+library = false
+[fortran]
+implicit-typing = true
+implicit-external = false
+source-form = "free"
+

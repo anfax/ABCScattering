@@ -71,7 +71,7 @@ do
 		build_dir $parity_dir
 
 		filename="$parity_dir/$input"
-
+        
 		echo "&input"                              > $filename
 		echo "  mass = $atom_a, $atom_b, $atom_c" >> $filename
 		echo "  jtot = $J"                        >> $filename
