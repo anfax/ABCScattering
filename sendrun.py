@@ -3,15 +3,15 @@ import os
 import getpass
 
 # Define server details
-remote_server = '192.168.6.3'
-username = 'lih'
+remote_server = 'server.example.com'  # Replace with your server address
+username = 'lihao'
 password = getpass.getpass('Enter password: ')
 
 # Get the local directory and remote directory from the user
 # local_directory = input('Enter the local directory to transfer: ')
 # remote_directory = input('Enter the remote directory: ')
 local_directory = os.path.dirname(os.path.abspath(__file__))
-remote_directory = os.path.join('/scratch/lih/', input('Enter the new remote directory name: '))
+remote_directory = os.path.join('/scratch/lihao/', input('Enter the new remote directory name: '))
 
 # Create SSH client
 ssh = paramiko.SSHClient()
